@@ -1,0 +1,11 @@
+.new_post{
+    font-weight: 600;
+    color:#333333;
+}
+
+.posts{
+    display: block;
+}
+.posts_wrapper{
+    display: block;
+}

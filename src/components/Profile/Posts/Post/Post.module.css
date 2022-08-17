@@ -1,0 +1,8 @@
+.published{
+    font-weight: 600;
+    color:#3333;
+}
+.published img{
+    max-width: 80px;
+    border-radius: 50%;
+}

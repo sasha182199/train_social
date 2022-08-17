@@ -1,7 +1,7 @@
 import './App.css';
-import Header from "./components/Header.jsx";
-import Aside from "./components/Aside.jsx";
-import Profile from "./components/Profile.jsx";
+import Header from "./components/Header/Header.jsx";
+import Aside from "./components/Aside/Aside.jsx";
+import Profile from "./components/Profile/Profile.jsx";
 
 function App() {
 
