@@ -10,12 +10,9 @@ const Posts = () => {
                 <button>Add Post</button>
                 <button>Remove Text</button>
                 <div className={s.posts_wrapper}>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
-                    <Post/>
+                    <Post message="Default first post"/>
+                    <Post message="Trying to change"/>
+
                 </div>
             </div>
 
