@@ -7,13 +7,14 @@ const Posts = () => {
                 <div className={s.new_post}>
                     New Post
                 </div>
-                <button>Add Post</button>
-                <button>Remove Text</button>
+
                 <div className={s.posts_wrapper}>
-                    <Post message="Default first post"/>
-                    <Post message="Trying to change"/>
+                    <Post message="Default first post" likeCount="15"/>
+                    <Post message="Trying to change" likeCount="25"/>
 
                 </div>
+                <button>Add Post</button>
+                <button>Remove Text</button>
             </div>
 
     );

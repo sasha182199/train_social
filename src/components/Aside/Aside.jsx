@@ -4,10 +4,10 @@ const Aside = () => {
     return (
         <aside>
             <ul>
-                <li className={s.item}>Profile</li>
-                <li className={s.item}>Message</li>
-                <li className={s.item}>News</li>
-                <li className={s.item}>Music</li>
+                <li className={s.item}><a href="/profile">Profile</a></li>
+                <li className={s.item}><a href="/dialogs">Messages</a></li>
+                <li className={s.item}><a href="#">News</a></li>
+                <li className={s.item}><a href="#">Music</a></li>
             </ul>
         </aside>
     );
