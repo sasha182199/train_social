@@ -1,0 +1,10 @@
+.dialog_name a{
+    font-size: 17px;
+    padding: 15px 5px;
+    display: block;
+    text-decoration: none;
+    color:#333;
+}
+.messageDialogs{
+    margin-left: 40px;
+}

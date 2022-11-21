@@ -5,7 +5,9 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import Profile from "./components/Profile/Profile.jsx";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
-function App() {
+function App(props) {
+
+
 
   return (
 
@@ -13,10 +15,13 @@ function App() {
         <div className="App">
             <Header/>
             <div className="wrapperMain">
-                <Aside/>
+                <Aside state={props.state.Sidebar}/>
                 <Routes>
-                    <Route path="/dialogs" element={<Dialogs/>}/>
-                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/dialogs/*" element={<Dialogs state={props.state.DialogsPage}/>}/>
+                    <Route path="/profile" element={<Profile
+                        profilePage={props.state.ProfilePage}
+                        dispatch={props.dispatch}/>}
+                    />
                 </Routes>
             </div>
             <footer></footer>

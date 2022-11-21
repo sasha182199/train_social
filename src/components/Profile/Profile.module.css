@@ -1,24 +1,5 @@
 .mainContent{
-    background-color: darkseagreen;
+    background-color: #dedede;
     flex-grow: 1;
     padding: 20px;
-}
-.logo_profile img{
-    max-width: 100px;
-}
-.profile{
-    display: flex;
-}
-ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin-left: 20px;
-}
-.item{
-    font-size: 20px;
-}
-.active{
-    color:#fff;
-    font-weight: 700;
 }

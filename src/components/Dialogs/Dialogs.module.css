@@ -1,3 +1,19 @@
 .dialogs{
-    font-size: 24px;
+    background-color: #dedede;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px;
+}
+.dialogs_title{
+    font-size: 21px;
+    font-weight: 600;
+    color:#333;
+    padding: 0 5px;
+}
+.dialogs_item{
+    display: block;
+}
+.messageDialogs{
+    display: block;
 }
