@@ -1,3 +1,8 @@
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+import sidebarReducer from "./sidebar-reducer";
+
+
 let store = {
      _state : {
         DialogsPage : {
@@ -13,7 +18,8 @@ let store = {
                 {message : "Looking for a job?" ,id : 2},
                 {message : "Fine, waiting for u" ,id : 3},
                 {message : "Got it" ,id : 4}
-            ]
+            ],
+            newMessageBody : ""
         },
         ProfilePage : {
             PostData : [
@@ -42,27 +48,14 @@ let store = {
     },
     dispatch(action) {
         // {type : ""}
-        if(action.type === "ADD-POST"){
-            let newPost = {
-                id : 5,
-                message : this._state.ProfilePage.newPostText,
-                likeCount : 0
-            };
-            this._state.ProfilePage.PostData.push(newPost);
-            this._state.ProfilePage.newPostText = "";
-            this._callSubscriber(this._state);
-        } else if(action.type === "UPDATE-ADD-POST-TEXT"){
-            this._state.ProfilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
+        this._state.ProfilePage = profileReducer(action, this._state.ProfilePage);
+        this._state.DialogsPage = dialogsReducer(action, this._state.DialogsPage);
+        this._state.Sidebar = sidebarReducer(action, this._state.Sidebar);
+
+        this._callSubscriber(this._state);
+
     }
 }
-
-
-
-
-
-
 
 export default store;
 window.store = store;

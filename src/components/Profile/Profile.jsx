@@ -1,6 +1,6 @@
 import s from "./Profile.module.css";
-import Posts from "./Posts/Posts.jsx";
 import ProfilePhoto from "./ProfilePhoto/ProfilePhoto";
+import PostsContainer from "./Posts/PostsContainer";
 
 const Profile = (props) => {
 
@@ -8,10 +8,7 @@ const Profile = (props) => {
     return (
         <main className={s.mainContent}>
             <ProfilePhoto/>
-            <Posts PostData={props.profilePage.PostData}
-                   newPostText={props.profilePage.newPostText}
-                   dispatch={props.dispatch}
-            />
+            <PostsContainer/>
         </main>
     );
 }
