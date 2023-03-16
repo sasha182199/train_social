@@ -11,5 +11,8 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.preloader{
+  max-width: 20px;
+  max-height: 20px;
+}
 
