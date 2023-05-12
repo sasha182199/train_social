@@ -4,6 +4,7 @@ import PostsContainer from "./Posts/PostsContainer";
 
 const Profile = (props) => {
 
+
     return (
         <main className={s.mainContent}>
 

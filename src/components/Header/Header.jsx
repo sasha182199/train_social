@@ -1,10 +1,15 @@
 import s from "./Header.module.css";
-
-const Header = () => {
+import logoMain from "../../images/facebook.webp"
+import {NavLink} from "react-router-dom";
+const Header = (props) => {
     return (
         <header className={s.header}>
-            <div className="wrapper">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/640px-Facebook_F_icon.svg.png" alt="logo"/>
+            <div className={s.wrapper}>
+                <img src={logoMain} alt="logo"/>
+                <div className={s.login_block}>
+                    {props.isAuth ? <div className={s.authName}>{props.login}</div> : <NavLink to="/login">Login</NavLink>}
+
+                </div>
             </div>
         </header>
     );
